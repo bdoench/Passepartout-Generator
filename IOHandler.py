@@ -10,3 +10,4 @@ class IOHandler:
     def saveImage(self, img, path, name):
         img.save(path + "\\" + name, "JPEG", quality=95)
         print("Saving: " + name + " -> " + path)
+        
