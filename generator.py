@@ -39,7 +39,7 @@ class Generator:
             height = round(top + image.size[1] + bottom)
             print(width, height)
             out = Image.new(image.mode,(width, height),self.settings.getColor())
-
-            out.save(path, "png")
+            out.paste(image, (round(left), round(top)))
+            out.save("E:\\Programming\\Python\\Passepartout-Generator\\testimages\\converted\\"+str(image.size)+".jpg", "JPEG")
             print("Saving image: " + str(image.size))
 

@@ -1,7 +1,7 @@
 from mode import Mode
 
 class Settings:
-    def __init__(self, border = 0.1, color = 255, mode = Mode.CENTER, filetypes = (".png", ".jpg", ".jpeg", ".jp2", ".tif", ".tiff")):
+    def __init__(self, border = 0.1, color = (255,255,255), mode = Mode.GOLDEN_RATIO, filetypes = (".png", ".jpg", ".jpeg", ".jp2", ".tif", ".tiff")):
         self.border = border
         self.color = color
         self.mode = mode

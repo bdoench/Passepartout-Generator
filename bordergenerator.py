@@ -20,6 +20,8 @@ def main():
     args = parser.parse_args()
 
     img_paths = findImages(args.path)
+
+    print(img_paths)
    
     generator = Generator(params, img_paths)
 
@@ -31,8 +33,6 @@ def findImages(dir):
         for file in files:
             if str(file).endswith(params.filetypes):
                 paths.append(os.path.join(path, file))
-
-    print(paths)
 
     return paths
 
