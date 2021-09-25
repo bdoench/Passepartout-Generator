@@ -41,3 +41,4 @@ class Generator:
             img = Image.new(image.mode, (width, height), self.color)
             img.paste(image, (round(left), round(top)))
             io.saveImage(img, self.out, "image_" + str(i+1) + ".jpg")          
+

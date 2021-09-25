@@ -81,4 +81,4 @@ class Settings:
 
     def addFiletype(self, ext):
         self.filetypes + ext
-        
+
