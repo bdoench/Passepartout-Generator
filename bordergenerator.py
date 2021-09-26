@@ -19,9 +19,9 @@ def main():
     parser.add_argument("-o", "--out", type = str, default = os.getcwd() + "\\converted" , help = "Directory, where processed images are being saved to.")
     parser.add_argument("-r", "--rec", type = bool, default = True , help = "Enable recursive scanning of subfolders.") 
     parser.add_argument("-d", "--depth", type = int, default = 3 , help = "Specifies the max. depth for recursive scanning.") 
-    parser.add_argument("-m", "--mode", type = int, default = 0, help = "Switches the mode of operation for image placement inside the frame. [0 : CENTER; 1 : GOLDEN_RATIO; 2 : OPTICAL_CENTER]")
+    parser.add_argument("-m", "--mode", type = int, default = 1, help = "Switches the mode of operation for image placement inside the frame. [0 : CENTER; 1 : GOLDEN_RATIO; 2 : OPTICAL_CENTER]")
     parser.add_argument("-c", "--color", type = str, default = "white", help = "Specifies the color to be used as the image border.") 
-    parser.add_argument("-b", "--border", type = float, default = 0.309, help = "Sets the border width as a fraction of the source dimensions. (values betweeen 0 and 1)")
+    parser.add_argument("-b", "--border", type = float, default = 0.15, help = "Sets the border width as a fraction of the source dimensions. (values betweeen 0 and 1)")
     parser.add_argument("-f", "--filetypes", type = tuple, default = (".png", ".jpg", ".jpeg", ".tif", ".tiff"), help = "Filetypes listed here will be considered as valid and selected for processing.")
     args = parser.parse_args()
     
@@ -52,7 +52,6 @@ def findImages(dir, recursive):
             break
 
         depth = depth + 1
-        print(depth)
     
     print("Found " + str(len(paths)) + " valid image files!")
     
